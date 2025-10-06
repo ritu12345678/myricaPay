@@ -7,7 +7,7 @@ import UserAssignedTable from './component/UserAssignedTable'
 
 const OverviewTab = () => {
   return (
-    <div>
+    <div className='px-3'>
       <OverviewCardSection/>
       <RoleBarChart/>
       <AdminActivityOverTime/>

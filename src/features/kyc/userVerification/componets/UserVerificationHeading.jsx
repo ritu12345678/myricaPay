@@ -9,8 +9,7 @@ const UserVerificationHeading = ({ title, content }) => {
                 <p className='p-0 m-0 heading-blue text-capitalize fs-18'> {title}</p>
                 <p className='p-0 m-0 fs-15'>{content}</p>
             </div>
-            <button type="button" className="btn btn-primary blue-btn">
-                    <span className='fs-18'>+</span>Add KYC Fields</button>
+         
            
         </div>
     )

@@ -5,7 +5,7 @@ import AdminTable from './AdminTable'
 import AdminListFilter from './AdminListFilter'
 const AdminTab = () => {
   return (
-    <div>
+    <div className='px-3'>
     <AdminHeading/>
   
     <AdminTable/>

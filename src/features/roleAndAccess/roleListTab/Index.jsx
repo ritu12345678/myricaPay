@@ -5,7 +5,7 @@ import RoleTable from './components/RoleTable'
 const RoleTab = () => {
  
   return (
-    <div>
+    <div className='px-3'>
       <Heading />
       <RoleTable/>
 

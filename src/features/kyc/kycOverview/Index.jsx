@@ -5,7 +5,7 @@ import KycOverviewChart from './components/KycChart'
 
 const KycOverviewTab = () => {
   return (
-    <div>
+    <div className="px-3">
       <KycOverviewCardSection/>
       <ApproveAndRejectionRate/>
       <KycOverviewChart/>

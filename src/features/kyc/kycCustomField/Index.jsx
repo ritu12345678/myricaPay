@@ -4,7 +4,7 @@ import KycCustomHeading from './components/KycCustomHeading'
 
 const KycCustomFieldTab = () => {
   return (
-    <div>
+    <div className='px-3'>
         <KycCustomHeading title="KYC Fields"content="Manage KYC fields and verification rules for customer onboarding."/>
       <KycCustomFieldTable/>
     </div>
