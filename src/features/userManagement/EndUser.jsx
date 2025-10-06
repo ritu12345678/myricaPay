@@ -4,7 +4,7 @@ import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputtext";
 import UserCard from "./component/UserCard";
 import { Icon } from '@iconify/react';
-import totalagent from "../../assets/totalagent.png"
+import totalAgent from "../../assets/totalAgent.png"
 import active from "../../assets/active.png"
 import AgentTable from "./component/AgentTable";
 import Checkbox from '@mui/material/Checkbox';
@@ -58,7 +58,7 @@ export default function EndUser() {
                 <div className="flex-fill w-20" >
 
                     <UserCard
-                        icon={totalagent}
+                        icon={totalAgent}
                         heading="Total"
                         value="1204"
                     />
