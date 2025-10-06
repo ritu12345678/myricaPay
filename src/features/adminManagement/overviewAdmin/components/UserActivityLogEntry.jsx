@@ -1,59 +1,30 @@
-import React from 'react';
-import Avatar from '@mui/material/Avatar';
-import { BsCalendar, BsPersonGear } from 'react-icons/bs';
-
-const UserActivityLogEntry = ({
-  userName,
-  activityTime,
-  role,
-  avatarSrc,
-  // Default to Bootstrap's primary color if no color is provided
-  activityColor = 'var(--bs-primary)', 
-}) => {
-  
-  // The custom style now uses the dynamic activityColor prop
-  const customBorderStyle = {
-    borderLeft: `4px solid ${activityColor}`, 
-  };
-
+import React from 'react'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import { Avatar } from '@mui/material';
+const UserActivityLogEntry = () => {
+   const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   return (
-    <div className="card border-0 rounded-2 shadow-sm" style={customBorderStyle}>
-      <div className="card-body p-3">
-        {/* Top Row: User Activity Text and MUI Avatar */}
-        <div className="d-flex justify-content-between align-items-center mb-2">
-          
-          <span className="mb-0 fw-bold">
-            {userName} logged in
-          </span>
-
-          <Avatar 
-            alt={userName} 
-            src={avatarSrc} 
-            sx={{ width: 32, height: 32 }}
-          />
-        </div>
-
-        {/* Bottom Row: Details (Time and Role) */}
-        <div className="d-flex align-items-center gap-3 text-secondary">
-          
-          {/* Time */}
-          <div className="d-flex align-items-center gap-1">
-            <BsCalendar size={14} />
-            <span className="small">{activityTime}</span>
+    <div className='card shadow-sm mb-2'>
+      <div className='card-body'>
+        <div className="left-border ps-2" style={{ borderLeftColor: randomColor }}>
+          <p className='p-0 m-0 fs-16 fw-500'>Alex logged in</p>
+          <div className='d-flex align-items-center gap-2'>
+            <CalendarMonthIcon />
+            <p className='m-0 p-0 fs-14 text-lightgrey'> 2 hours Ago</p>
           </div>
-
-          {/* Role Badge/Chip */}
-          <span
-            className="badge text-bg-light text-dark d-flex align-items-center fw-normal px-2 py-1 rounded-2"
-            style={{ backgroundColor: '#e9ecef' }} 
-          >
-            <BsPersonGear size={14} className="me-1" />
-            {role}
-          </span>
+        </div>
+        <div className='d-flex align-items-center justify-content-between ms-3'>
+          <div className=' fit-content d-flex align-items-center gap-1 mt-2 p-1 rounded' style={{ backgroundColor: "#E5E7EB" }}>
+            <ManageAccountsIcon fontSize='12' />
+            <p className='p-0 m-0 fs-12 '>Admin</p>
+          </div>
+          <Avatar />
         </div>
       </div>
-    </div>
-  );
-};
 
-export default UserActivityLogEntry;
+    </div>
+  )
+}
+
+export default UserActivityLogEntry

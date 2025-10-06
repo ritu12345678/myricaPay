@@ -17,6 +17,8 @@ import StaticContentManagementPage from '../pages/StaticContentManagementPage';
 import CurrencyAndFeesPage from '../pages/CurrencyAndFeesPage';
 import HelpChatPage from '../pages/HelpAndChatPage';
 import RoleAndAccessPage from '../pages/RoleAndAccessPage';
+import AdminManagementOverviewPage from '../pages/AdminManagementOverviewPage';
+import KycPage from '../pages/KycPage';
 
 
 const AppRoutes = () => {
@@ -96,7 +98,28 @@ const AppRoutes = () => {
           <Layout />
         }>
         <Route path="/help" element={<HelpChatPage/>} />
+      
+      </Route>
+       <Route
+        element={
+          <Layout />
+        }>
+   
         <Route path="/roles" element={<RoleAndAccessPage/>} />
+      </Route>
+       <Route
+        element={
+          <Layout />
+        }>
+   
+        <Route path="/admin" element={<AdminManagementOverviewPage/>} />
+      </Route>
+        <Route
+        element={
+          <Layout />
+        }>
+   
+        <Route path="/kyc" element={<KycPage/>} />
       </Route>
       <Route path="*" element={<h1>404 - Page Not Found</h1>} />
     </Routes>

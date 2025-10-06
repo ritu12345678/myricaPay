@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { TabView, TabPanel } from 'primereact/tabview';
 import AdminOverViewTab from './overviewAdmin/Index';
+import AdminTab from './admin/Index';
 
 
 
 
-const AdminManagement = () => {
+const AdminOverView = () => {
 const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className='help-chat hide-tab-content mt-0'>
@@ -22,14 +23,14 @@ const [activeIndex, setActiveIndex] = useState(0);
       </TabView>
  {/* Tab Content */}
       <div >
-        {activeIndex === 0 && <OverviewTab />}
-        {/* {activeIndex === 1 && (
-       <RoleTab />
-        )} */}
+        {activeIndex === 0 && <AdminOverViewTab />}
+        {activeIndex === 1 && (
+       <AdminTab />
+        )}
  
       </div>
     </div>
   );
 };
 
-export default AdminManagement;
+export default AdminOverView;

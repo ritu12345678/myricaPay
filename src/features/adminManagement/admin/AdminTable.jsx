@@ -16,9 +16,8 @@ import {
 } from '@mui/material';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import { Icon } from '@iconify/react'; // ✅ Iconify
-import UserListFilter from './UserListFilter';
-import AddUserForm from './AddUserForm';
-import CustomOffcanvas from '../../../../components/CustomOffCanvas';
+import AdminListFilter from './AdminListFilter';
+
 
 
 // ✅ Sample user data
@@ -71,17 +70,11 @@ EnhancedTableHead.propTypes = {
 };
 
 // ✅ Main Table
-export default function UserTable() {
+export default function AdminTable() {
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-const [showOffCanvas, setShowOffCanvas] = useState(false)
-    const handleOpenCanvas = () => {
-        setShowOffCanvas(true)
-    }
-    const handleCloseCanvas = () => {
-        setShowOffCanvas(false)
-    }
+
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
       setSelected(rows.map((n) => n.id));
@@ -138,7 +131,7 @@ const [showOffCanvas, setShowOffCanvas] = useState(false)
   return (
     <div className="card mt-3">
       <div className="card-body">
-        <UserListFilter />
+        <AdminListFilter />
         <Box sx={{ width: '100%' }}>
           <TableContainer component={Paper} elevation={0}>
             <Table aria-labelledby="user-table" size="medium">
@@ -190,7 +183,7 @@ const [showOffCanvas, setShowOffCanvas] = useState(false)
                           sx={{ color: 'grey.700' }}
                           onClick={handleActionClick}
                         >
-                          <Icon icon="mdi:account-edit-outline" width="20" height="20" onClick={handleOpenCanvas}/>
+                          <Icon icon="mdi:account-edit-outline" width="20" height="20" />
                         </IconButton>
 
                         {/* ✅ Delete Icon */}
@@ -219,7 +212,7 @@ const [showOffCanvas, setShowOffCanvas] = useState(false)
             onRowsPerPageChange={handleChangeRowsPerPage}
           />
         </Box>
-        <CustomOffcanvas title="User Management" children={<AddUserForm show={showOffCanvas} onClose={handleCloseCanvas}  />} show={showOffCanvas} onClose={handleCloseCanvas} height='60vh'/>
+      
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 .p-dropdown {
     height: 2.4375rem;
 .p-inputtext {
-        padding: 4px 12px;
+        padding: 0.25rem 0.75rem;
 }}
 /* Remove default underline */
 .chip-tabs .p-tabview-nav {
@@ -15,7 +15,7 @@
 }
 
 .chip-tabs .p-tabview-nav li .p-tabview-nav-link {
-  border: 1px solid #E5E7EB !important;
+  border: 0.0625rem solid #E5E7EB !important;
   border-radius: 0.375rem !important;
   padding: 0.3rem 1rem !important;
   background:#E5E7EB ;
@@ -62,3 +62,80 @@ border-radius: 0.375rem;
   -ms-overflow-style: none; /* IE 10+ */
 }
 .hide-tab-content .p-tabview .p-tabview-panels {display:none !important}
+// ====================================================================
+// Rejection Reasons List Styles (for PrimeBarChartItem component)
+// ====================================================================
+
+// Base class for the progress bar container
+.rejection-bar-container {
+    position: relative;
+    
+    // Ensure the container itself uses the bottom margin class
+    &.mb-4 {
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+// Targeting the PrimeReact ProgressBar component wrapper
+.p-progressbar {
+    // Overriding default PrimeReact styling for the track
+    background-color: #e9ecef !important; // Light gray background
+    border: none !important;
+    height: 1.875rem !important;
+    border-radius: 0.375rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+// Targeting the filled part of the PrimeReact ProgressBar
+.p-progressbar-value {
+    // The background color will be set dynamically via React inline style
+    // using the CSS variable (var(--bar-color))
+    // We only set the default look here.
+    border: none !important;
+    height: 1.875rem !important;
+    border-radius: 0.375rem !important;
+    
+    // Crucial for positioning the dot relative to the bar
+    position: relative; 
+}
+
+// Hiding the default percentage text inside the bar
+.p-progressbar-label {
+    display: none !important; 
+}
+
+// Custom class for the white dot
+.rejection-bar-dot {
+    // Styles to match the small white dot in the screenshot
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2; // Ensure it sits above the bar
+
+   
+}
+.chart-card .p-dropdown {
+    min-width: 8.75rem; // 140px min-width
+    height: 2.25rem; // 36px height
+    font-size: 0.875rem; // 14px
+    // border-color: $kyc-border; 
+    box-shadow: none; 
+    
+    // Focus ring to match standard look or custom green (using Bootstrap utility mixin equivalent)
+    &:focus {
+        outline: 0;
+        // box-shadow: 0 0 0 0.2rem rgba($kyc-green, 0.25); 
+        // border-color: $kyc-green;
+    }
+}
+
+.p-dropdown-label {
+    padding: 0.5rem 0.75rem; 
+}
+
+.p-dropdown-trigger {
+    width: 2rem; 
+}

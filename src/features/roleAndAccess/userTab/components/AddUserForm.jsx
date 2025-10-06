@@ -96,29 +96,7 @@ const AddUserForm = ({ show, onClose, onSubmit }) => {
         </div>
       </div>
 
-      {/* 2. Agent Selection */}
-      {/* <div className="card mb-2">
-        <div className="card-body">
-          <h6 className="fw-bold fs-18 mb-3">Agent Selection</h6>
-          <Divider />
-          <div className="mb-3">
-            <label htmlFor="assignedAgent" className="form-label">Assign Agent</label>
-            <Dropdown
-              id="assignedAgent"
-              value={formData.assignedAgent}
-              options={agents}
-              onChange={(e) => updateFormData('assignedAgent', e.value)}
-              placeholder="Select Agent"
-              className="w-100"
-            />
-          </div>
-        </div>
-      </div> */}
-
-      {/* 3. Priority Section */}
-      {/* <PrioritySection formData={formData} updateFormData={updateFormData} /> */}
-
-      {/* Footer */}
+     
       <footer>
         <div className="card mt-4 px-0">
           <div className="d-flex gap-2 px-3 py-3">

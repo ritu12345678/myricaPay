@@ -8,13 +8,13 @@ const OverviewCardSection = () => {
                 <div className='col'>
                     <OverviewCard title="Active Role" value={456} />
                 </div>
- <div className='col'>
+                <div className='col'>
                     <OverviewCard title="Active User" value={54} />
                 </div>
-                 <div className='col'>
-                    <OverviewCard title="Assigned" value={230}/>
+                <div className='col'>
+                    <OverviewCard title="Assigned" value={230} />
                 </div>
-                 <div className='col'>
+                <div className='col'>
                     <OverviewCard title="Unauthorized Attempts" value={3} />
                 </div>
             </div>
