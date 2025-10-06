@@ -1,11 +1,11 @@
 import React from 'react'
-import alert from "../../../assets/alert.png"
+import Alert from "../../../assets/Alert.png"
 
 const AlertCard = () => {
   return (
     <div className='d-flex align-items-center '>
         <div className='me-2'>
-            <img src={alert}/>
+            <img src={Alert}/>
         </div>
         <div className='me-auto'>
             <p className='p-0 m-0 text-danger fs-16 fw-500'>
