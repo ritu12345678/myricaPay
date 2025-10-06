@@ -5,7 +5,7 @@ import StaticContentHeading from './component/StaticContentHeading';
 import PrivacyPolicy from './component/PrivacyPolicy';
 import AboutUs from './component/AboutUs';
 import FaqEditor from './component/Faqs';
-import ContactDetailTab from './component/ContactDEtailTab';
+import ContactDetailTab from './component/ContactDetailTab';
 const StaticContentManagement = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
