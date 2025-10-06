@@ -8,7 +8,7 @@ import totalAgent from "../../assets/totalAgent.png"
 import active from "../../assets/active.png"
 import AgentTable from "./component/AgentTable";
 import Checkbox from '@mui/material/Checkbox';
-import addofficer from "../../assets/addofficer.png"
+import addOfficer from "../../assets/addOfficer.png"
 import mail from "../../assets/mail.png"
 import exportreport from "../../assets/exportreport.png"
 import CustomChip from "../../components/CustomChip";
@@ -47,7 +47,7 @@ export default function EndUser() {
                     <button type="button" className="btn btn-primary btn-outline-secondary transparent-btn"> <img className="mb-1 pe-1" src={exportreport} alt="Add" style={{ width: 18, height: 18 }} />Export Users</button>
                     <button type="button" className="btn btn-primary btn-outline-secondary transparent-btn"> <img className="mb-1 pe-1" src={bulkimport} alt="Add" style={{ width: 18, height: 18 }} />Bulk Import</button>
                     <button className=" btn btn-primary blue-btn ">
-                        <img className="mb-1 pe-1" src={addofficer} alt="Add" style={{ width: 18, height: 18 }} />
+                        <img className="mb-1 pe-1" src={addOfficer} alt="Add" style={{ width: 18, height: 18 }} />
                         Create User
                     </button>
                 </div>
