@@ -1,0 +1,151 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  
+  background-color: #6B7280;
+
+}
+.card-shadow {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); /* soft shadow */
+  border-radius: .5rem; /* optional rounded corners */
+  transition: box-shadow 0.3s ease; /* smooth hover effect */
+}
+.blue-btn{
+  background-color: #043E72 !important;
+  border-radius: .5rem;
+  border-color: #043E72 !important;
+  padding: 0.250rem .95rem .250rem .95rem !important;
+}
+.lightblue-btn{
+  background-color: #0A6EC7 !important;
+  border-radius: .5rem;
+  border-color: #0A6EC7 !important;
+  padding: 0.250rem .95rem .250rem .95rem !important;
+}
+.transparent-btn{ 
+  border-radius: .5rem !important;
+border-color: #989898 !important;
+background-color: transparent!important;
+padding: 0.250rem .95rem .250rem .95rem !important;
+
+ }
+ .transparent-btn:hover,
+.transparent-btn:focus {
+  background-color: transparent !important;  /* no blue/grey hover */
+  color: inherit !important;                 /* keep inherited text color */
+  border-color: inherit !important;          /* inherit border tone */
+  box-shadow: none !important;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.text-blue-custom{
+  color:#043E72!important
+}
+.text-black-custom{color:#1F2937 !important;}
+.heading-black {
+  color: #1F2937;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.heading-black-30 {
+  @extend .heading-black;
+  font-size: 30px;
+}
+.heading-blue {
+  color: #043E72;
+  font-weight: 700;
+  font-size: 1.875rem;
+}
+.heading-blue-20{
+    color: #043E72!important;
+  font-weight: 600;
+  font-size:1.25rem;
+}
+.heading-blue-18{
+    color: #043E72!important;
+  font-weight: 600;
+  font-size:1.125rem;
+}
+.subheading-grey {
+  color: #6B7280;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.text-lightgrey{
+  color: grey;
+}
+.text-darkgrey{
+  color:#6B7280
+}
+
+.text-lightblue{
+  color:#0A6EC7;
+
+}
+.text-green{
+  color: #10B981;
+}
+.bg-grey{
+  background-color: #E5E7EB !important;
+}
+.no-padding{
+  padding:0!important
+}
+.mb-30{
+  margin-bottom: 4rem !important;
+}
+.fs-10 { font-size: 10px !important; }
+.fs-11 { font-size: 11px !important; }
+.fs-12 { font-size: 12px !important; }
+.fs-13 { font-size: 13px !important; }
+.fs-14 { font-size: 14px !important; }
+.fs-15 { font-size: 15px !important; }
+.fs-16 { font-size: 16px !important; }
+.fs-17 { font-size: 17px !important; }
+.fs-18 { font-size: 18px !important; }
+.fs-19 { font-size: 19px !important; }
+.fs-20 { font-size: 20px !important; }
+.fs-21 { font-size: 21px !important; }
+.fs-22 { font-size: 22px !important; }
+.fs-23 { font-size: 23px !important; }
+.fs-24 { font-size: 24px !important; }
+.fs-25 { font-size: 25px !important; }
+.fs-26 { font-size: 26px !important; }
+.fs-27 { font-size: 27px !important; }
+.fs-28 { font-size: 28px !important; }
+.fs-29 { font-size: 29px !important; }
+.fs-30 { font-size: 30px !important; }
+.fw-300 { font-weight: 300 !important; }
+.fw-400 { font-weight: 400 !important; }
+.fw-500 { font-weight: 500 !important; }
+.fw-600 { font-weight: 600 !important; }
+.fw-700 { font-weight: 700 !important; }
+.border-lightgrey{
+  border: 1px solid #E5E7EB;
+}
+.h-16{
+  height: 1rem!important;
+}
+// class to remove padding in canvasfooter 
+.canvas-body .canvas-footer{
+  
+}
