@@ -1,0 +1,22 @@
+.dashboard-bootstrap .card {
+  border-radius: 0.75rem;
+}
+
+.dashboard-bootstrap .btn-group .btn.active {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+.dashboard-bootstrap .legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+/* Reduce list item spacing for compact look */
+.dashboard-bootstrap .list-group-item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
