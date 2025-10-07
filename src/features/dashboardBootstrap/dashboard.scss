@@ -20,3 +20,14 @@
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+
+/* Single-row filter bar behavior */
+.dashboard-bootstrap .filter-row {
+  scrollbar-width: thin;
+}
+.dashboard-bootstrap .filter-item {
+  min-width: 200px;
+}
+.dashboard-bootstrap .risk-block {
+  min-width: 360px;
+}

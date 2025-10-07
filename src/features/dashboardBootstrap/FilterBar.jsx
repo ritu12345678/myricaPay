@@ -40,37 +40,59 @@ const FilterBar = () => {
   return (
     <div className="card shadow-sm border-0">
       <div className="card-body p-3">
-        <div className="row g-3 align-items-center">
+        <div className="d-flex align-items-center gap-3 flex-nowrap overflow-auto filter-row">
           {/* Corridor */}
-          <div className="col-12 col-md-3 col-xl-2">
+          <div className="filter-item">
             <div className="small text-muted mb-1">By Corridor</div>
-            <Dropdown value={corridor} onChange={(e) => setCorridor(e.value)} options={corridors} className="w-100" />
+            <Dropdown
+              value={corridor}
+              onChange={(e) => setCorridor(e.value)}
+              options={corridors}
+              className="w-100 p-inputtext-sm"
+              style={{ minWidth: 190 }}
+            />
           </div>
           {/* Business Line */}
-          <div className="col-12 col-md-3 col-xl-2">
+          <div className="filter-item">
             <div className="small text-muted mb-1">By Business Line</div>
-            <Dropdown value={businessLine} onChange={(e) => setBusinessLine(e.value)} options={businessLines} className="w-100" />
+            <Dropdown
+              value={businessLine}
+              onChange={(e) => setBusinessLine(e.value)}
+              options={businessLines}
+              className="w-100 p-inputtext-sm"
+              style={{ minWidth: 170 }}
+            />
           </div>
           {/* Transaction Type */}
-          <div className="col-12 col-md-3 col-xl-2">
+          <div className="filter-item">
             <div className="small text-muted mb-1">By Transaction Type</div>
-            <Dropdown value={txType} onChange={(e) => setTxType(e.value)} options={txTypes} className="w-100" />
+            <Dropdown
+              value={txType}
+              onChange={(e) => setTxType(e.value)}
+              options={txTypes}
+              className="w-100 p-inputtext-sm"
+              style={{ minWidth: 170 }}
+            />
           </div>
           {/* Time Period */}
-          <div className="col-12 col-md-3 col-xl-2">
+          <div className="filter-item">
             <div className="small text-muted mb-1">By Time Period</div>
-            <Dropdown value={timePeriod} onChange={(e) => setTimePeriod(e.value)} options={timePeriods} className="w-100" />
+            <Dropdown
+              value={timePeriod}
+              onChange={(e) => setTimePeriod(e.value)}
+              options={timePeriods}
+              className="w-100 p-inputtext-sm"
+              style={{ minWidth: 170 }}
+            />
           </div>
 
           {/* Risk Score */}
-          <div className="col-12 col-xl-4">
-            <div className="d-flex align-items-center gap-2">
-              <div style={{ minWidth: 110 }} className="small text-muted">By Risk Score</div>
-              <div className="flex-grow-1 px-2">
-                <Slider value={riskScore} onChange={(e) => setRiskScore(e.value)} className="w-100" />
-                <div className="mt-2">
-                  <ProgressBar value={riskScore} showValue template={(options) => (<span>{options.value}%</span>)} />
-                </div>
+          <div className="ms-auto d-flex align-items-center gap-2 risk-block">
+            <div style={{ minWidth: 110 }} className="small text-muted">By Risk Score</div>
+            <div className="flex-grow-1 px-2" style={{ minWidth: 220 }}>
+              <Slider value={riskScore} onChange={(e) => setRiskScore(e.value)} className="w-100" />
+              <div className="mt-2">
+                <ProgressBar value={riskScore} showValue template={(options) => (<span>{options.value}%</span>)} />
               </div>
             </div>
           </div>
