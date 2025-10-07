@@ -8,6 +8,9 @@ export const StatCard = ({
   trend = "neutral",
   subtitle,
   className,
+  icon, // optional: string className or ReactNode
+  iconBg, // optional: background color for icon container
+  iconColor, // optional: icon color override
 }) => {
   const getTrendColor = () => {
     if (trend === "up") return "success";
@@ -27,6 +30,24 @@ export const StatCard = ({
     return "";
   };
 
+  const renderIcon = () => {
+    if (!icon) return null;
+    const content = typeof icon === "string" ? <i className={icon} /> : icon;
+    return (
+      <span
+        className="d-inline-flex align-items-center justify-content-center rounded-3"
+        style={{
+          width: 34,
+          height: 34,
+          background: iconBg || "rgba(4,62,114,0.08)",
+          color: iconColor || "#0A6EC7",
+        }}
+      >
+        {content}
+      </span>
+    );
+  };
+
   return (
     <div
       className={`card border-0 shadow-sm h-100 ${className || ""}`}
@@ -40,8 +61,11 @@ export const StatCard = ({
         className="card-body d-flex flex-column justify-content-between"
         style={{ padding: "1rem 1.25rem" }}
       >
-        {/* Title */}
-        <p className="text-muted small mb-2">{title}</p>
+        {/* Header: title + optional icon */}
+        <div className="d-flex align-items-center justify-content-between mb-2">
+          <p className="text-muted small mb-0">{title}</p>
+          {renderIcon()}
+        </div>
 
         {/* Value + Change Row */}
         <div className="d-flex justify-content-between align-items-end flex-wrap">
@@ -71,7 +95,7 @@ export const StatCard = ({
             </span>
           )}
         </div>
- {subtitle&&<p className="text-muted small mt-2 mb-0">{subtitle}</p>}
+        {subtitle && <p className="text-muted small mt-2 mb-0">{subtitle}</p>}
       </div>
     </div>
   );
