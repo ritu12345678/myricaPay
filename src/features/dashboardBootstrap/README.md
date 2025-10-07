@@ -1,0 +1,1 @@
+This folder contains a Bootstrap-first dashboard composed of independent React components. It uses PrimeReact for dropdowns and progress bar and Recharts for charts. Import `src/features/dashboardBootstrap/Index.jsx` to render the whole dashboard without modifying existing pages.
