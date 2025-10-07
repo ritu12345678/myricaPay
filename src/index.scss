@@ -26,6 +26,14 @@ body {
   border-radius: .5rem; /* optional rounded corners */
   transition: box-shadow 0.3s ease; /* smooth hover effect */
 }
+/* Generic utility for subtle hover lift on dashboard metric cards */
+.card.shadow-sm:hover {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.08) !important;
+}
+/* Ensure bootstrap icon in metric card is sized consistently */
+.metric-icon-md {
+  font-size: 1rem;
+}
 .blue-btn{
   background-color: #043E72 !important;
   border-radius: .5rem;

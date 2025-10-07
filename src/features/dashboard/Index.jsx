@@ -11,6 +11,7 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
+import StatsRow from "./components/StatsRow";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 // Dummy Data
@@ -34,28 +35,10 @@ const COLORS = ["#4caf50", "#ff9800", "#f44336"];
 const Dashboard = () => {
   return (
     <Box sx={{ p: 3 }}>
-      {/* Top Stats */}
-      <Grid container spacing={2} mb={3}>
-        {[
-          { title: "Total Users", value: "24,395", color: "#2196f3" },
-          { title: "Total Volume", value: "$1.32M", color: "#4caf50" },
-          { title: "Active Agents", value: "3,247", color: "#ff9800" },
-          { title: "New Signups", value: "1,276", color: "#f44336" },
-        ].map((item, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
-            <Card sx={{ borderLeft: `5px solid ${item.color}` }}>
-              <CardContent>
-                <Typography variant="subtitle2" color="text.secondary">
-                  {item.title}
-                </Typography>
-                <Typography variant="h6" fontWeight="bold">
-                  {item.value}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+      {/* Top Stats (Bootstrap cards) */}
+      <div className="container-fluid px-0">
+        <StatsRow />
+      </div>
 
       {/* Alerts + Quick Actions */}
       <Grid container spacing={2} mb={3}>
