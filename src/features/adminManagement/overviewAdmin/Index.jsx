@@ -6,9 +6,9 @@ import LoginActivityAndAlertSection from './components/LoginActivityAndAlertSect
 const AdminOverViewTab = () => {
   return (
     <div className='px-3'>
-        <AdminCardSection/>
-   
-    <LoginActivityAndAlertSection/>
+      <AdminCardSection />
+
+      <LoginActivityAndAlertSection />
     </div>
   )
 }

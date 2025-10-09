@@ -6,7 +6,12 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CustomTable from "../../../components/CustomTable";
 import exporticon from "../../../assets/exporticon.png"
 import CustomChip from "../../../components/ChipCustom";
+import { useNavigate } from "react-router-dom";
 
+
+
+export default function TransactionTable() {
+  const navigate = useNavigate()
 const rows = [
   {
     id: "TRX-78945",
@@ -86,10 +91,10 @@ const columns = [
     sortable: false,
     renderCell: () => (
       <Box display="flex" gap={1}>
-        <IconButton size="small" color="primary">
+        <IconButton size="small" color="primary" onClick={()=>navigate("/transactions-detail")}>
           <VisibilityIcon fontSize="small" />
         </IconButton>
-        <IconButton size="small" color="success">
+        <IconButton size="small" color="success" >
           <EditIcon fontSize="small" />
         </IconButton>
         <IconButton size="small" color="error">
@@ -99,8 +104,6 @@ const columns = [
     ),
   },
 ];
-
-export default function TransactionTable() {
   return (
  
   

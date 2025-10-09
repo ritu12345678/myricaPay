@@ -9,7 +9,13 @@ import CustomChip from "../../../components/ChipCustom";
 import exporticon from "../../../assets/exporticon.png";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import EventIcon from "@mui/icons-material/Event";
-const rows = [
+import { useNavigate } from "react-router-dom";
+
+
+export default function ReportTable() {
+  const navigate = useNavigate()
+
+  const rows = [
   {
     id: 1,
     reportName: "Monthly Compliance Report",
@@ -67,7 +73,7 @@ const columns = [
     sortable: false,
     renderCell: () => (
       <Box display="flex" gap={1}>
-        <IconButton size="small" sx={{ color: "grey.600" }}>
+        <IconButton size="small" sx={{ color: "grey.600" }} onClick={()=>navigate("/report-detail")}>
           <PlayArrowIcon fontSize="small" />
         </IconButton>
         <IconButton size="small" sx={{ color: "grey.600" }}>
@@ -83,8 +89,6 @@ const columns = [
     ),
   },
 ];
-
-export default function ReportTable() {
   return (
     <div className="card p-3 mb-4">
       {/* Header */}

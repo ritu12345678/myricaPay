@@ -1,3 +1,18 @@
+/* Reduce height of tab underline / indicator */
+.p-tabview .p-tabview-nav .p-tabview-selected {
+    border-bottom: 6px solid #1976D2 !important; /* Set to desired thickness */
+}
+
+/* Remove completely */
+.p-tabview .p-tabview-nav .p-tabview-selected {
+    border-bottom: none !important;
+}
+
+/* Optional: add some padding to header for better alignment */
+.p-tabview .p-tabview-nav li .p-tabview-title {
+    padding-bottom: 1px;
+    text-decoration: none; /* smaller than default */
+}
  
 .p-dropdown {
     height: 2.4375rem;
@@ -76,10 +91,10 @@ border-radius: 0.375rem;
     }
 }
 
-// Targeting the PrimeReact ProgressBar component wrapper
-.p-progressbar {
-    // Overriding default PrimeReact styling for the track
-    background-color: #e9ecef !important; // Light gray background
+
+.rejection-bar .p-progressbar {
+ 
+    background-color: #e9ecef !important; 
     border: none !important;
     height: 1.875rem !important;
     border-radius: 0.375rem !important;
@@ -87,11 +102,9 @@ border-radius: 0.375rem;
     margin: 0 !important;
 }
 
-// Targeting the filled part of the PrimeReact ProgressBar
+
 .p-progressbar-value {
-    // The background color will be set dynamically via React inline style
-    // using the CSS variable (var(--bar-color))
-    // We only set the default look here.
+  
     border: none !important;
     height: 1.875rem !important;
     border-radius: 0.375rem !important;
@@ -139,3 +152,22 @@ border-radius: 0.375rem;
 .p-dropdown-trigger {
     width: 2rem; 
 }
+/* ✅ Progress Bar Custom Color */
+.top-performer{.custom-progress .p-progressbar-value {
+  background-color: var(--progress-color) !important;
+}
+
+.custom-progress {
+  background-color: #e9ecef !important; /* Light gray background like Bootstrap cards */
+  border-radius: 4px;
+}
+
+/* ✅ Agent Icon Circle */
+.agent-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}}

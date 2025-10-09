@@ -10,7 +10,7 @@ const HighlightBorderWrapper = ({
 }) => {
   return (
     <div
-      className={classNames("highlight-border-wrapper p-3 mb-3", className)}
+      className={classNames("highlight-border-wrapper p-3 mb-2", className)}
       style={{
         borderLeft: `6px solid ${borderColor}`,
         backgroundColor: backgroundColor,

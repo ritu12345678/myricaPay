@@ -196,7 +196,7 @@ export default function CurrencyExchangeTable() {
 
                                             {/* Actions */}
                                             <TableCell align="center">
-                                                <IconButton size="small" sx={{ color: 'grey' }} onClick={handleActionClick}>
+                                                <IconButton size="small" sx={{ color: 'grey' }} onClick={handleOpenCanvas}>
                                                     <EditIcon fontSize="small" />
                                                 </IconButton>
                                                 <IconButton size="small" sx={{ color: 'grey' }} onClick={handleActionClick}>

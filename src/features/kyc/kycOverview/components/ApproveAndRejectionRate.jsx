@@ -52,7 +52,7 @@ const ApproveAndRejectionRate = () => {
 
 
     <div className="card shadow-sm rounded-3" style={{ maxWidth: '400px' }}>
-      <div className="card-body p-4">
+      <div className="card-body p-4 rejection-bar">
         <h5 className="fw-bold mb-4">Rejection Reasons</h5>
 
         {rejectionData.map((item, index) => (

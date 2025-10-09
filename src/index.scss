@@ -21,6 +21,9 @@ body {
   background-color: #6B7280;
 
 }
+.w-15{width:15%}
+.w-16{width:16%}
+.w-14 {width:14%}
 .card-shadow {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03); /* soft shadow */
   border-radius: .5rem; /* optional rounded corners */
@@ -107,6 +110,7 @@ h1 {
 .bg-grey{
   background-color: #E5E7EB !important;
 }
+.bg-lightgreen {background-color: #DCFCE7!important;}
 .no-padding{
   padding:0!important
 }

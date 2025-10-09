@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 import 'react-datepicker/dist/react-datepicker.css';
-import filterIcon from '../../../assets/filter.png';
+
 import exporticon from "../../../assets/exporticon.png"
+import ExportDataModal from '../../../components/ExportDataModal';
 const CurrencyFilterSection = ({ openCanvas }) => {
   const createdOptions = [
     { name: 'Created', code: 'created' },
@@ -30,7 +31,13 @@ const CurrencyFilterSection = ({ openCanvas }) => {
   const [amount, setAmount] = useState(null);
   const [dueDate, setDueDate] = useState(null);
   const [more, setMore] = useState(null);
-
+  const [showDataModal, setShowDataModal] = useState(false)
+  const handleOpenDataModal = () => {
+    setShowDataModal(true)
+  }
+  const handlecloseDataModal = () => {
+    setShowDataModal(false)
+  }
   const handleSaveFilter = () => {
     console.log('Save filter', { created, amount, dueDate, more });
   };
@@ -78,7 +85,7 @@ const CurrencyFilterSection = ({ openCanvas }) => {
             onChange={(e) => setMore(e.value)}
             style={{ minWidth: 140 }}
           />
-          <button type="button" className="btn btn-primary btn-outline-secondary transparent-btn "> <img className="mb-1 pe-1" src={exporticon} alt="Add" style={{ width: 18, height: 18 }} />Export</button>
+          <button type="button" className="btn btn-primary btn-outline-secondary transparent-btn " onClick={handleOpenDataModal}> <img className="mb-1 pe-1" src={exporticon} alt="Add" style={{ width: 18, height: 18 }} />Export</button>
         </div>
 
         {/* Right section: save filter */}
@@ -94,6 +101,7 @@ const CurrencyFilterSection = ({ openCanvas }) => {
           </button>
         </div>
       </div>
+      <ExportDataModal open={showDataModal} handleClose={handlecloseDataModal} />
     </div>
   );
 };

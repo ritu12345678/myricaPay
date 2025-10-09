@@ -1,30 +1,27 @@
 import React from 'react';
 import { Button } from 'primereact/button'; // Still using PrimeReact Button for functionality
-
+import DownloadIcon from '@mui/icons-material/Download';
+import ShareIcon from '@mui/icons-material/Share';
+import PrintRoundedIcon from '@mui/icons-material/PrintRounded';
+import BorderColorRoundedIcon from '@mui/icons-material/BorderColorRounded';
 const HeaderBar = ({ data }) => {
   return (
     // Bootstrap row to contain the title/status and the buttons
-    <div className="row align-items-center mb-4">
-      
-      {/* Left Column: Transaction ID and Status */}
-      <div className="col-md-8 d-flex align-items-center">
-        <h1 className="h4 text-primary m-0">
-          Transaction Management Detail: 
-          <span className="fw-normal">{data.id}</span>
-          
-          {/* Badge for Status */}
-          <span className={`badge ms-2 ${data.status === 'Completed' ? 'bg-success' : 'bg-warning'}`}>
-            {data.status}
-          </span>
-        </h1>
+    <div className="d-flex justify-content-between align-items-center  pb-2">
+      <div><h4 className="text-blue-custom mb-0">Transaction Management Detail</h4>
+        <h5 className='fs-20 text-lightblue'>Transaction ID: TRX-2023-07-28-00134 <span className='badge bg-lightgreen text-success'> completed</span></h5>
       </div>
 
-      {/* Right Column: Action Buttons */}
-      <div className="col-md-4 d-flex justify-content-end">
-        {/* PrimeReact Button with Bootstrap-like styling classes */}
-        <Button label="Print" icon="pi pi-print" className="p-button-text me-2 p-button-sm" />
-        <Button label="Export" icon="pi pi-file-export" className="p-button-text me-2 p-button-sm" />
-        <Button label="Edit" icon="pi pi-pencil" className="p-button-primary p-button-sm" />
+
+      <div className='d-flex align-items-center '>
+        <button className="btn btn-outline-secondary btn-sm">
+          <PrintRoundedIcon fontSize="small" /> Print
+        </button>
+        <button className="btn btn-outline-primary btn-sm me-2">
+          <DownloadIcon fontSize="small" /> Export
+        </button>
+        <button className='btn btn-primary lightblue-btn'>    <BorderColorRoundedIcon fontSize="small" />Edit</button>
+
       </div>
     </div>
   );

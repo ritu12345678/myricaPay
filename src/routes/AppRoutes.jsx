@@ -19,6 +19,9 @@ import HelpChatPage from '../pages/HelpAndChatPage';
 import RoleAndAccessPage from '../pages/RoleAndAccessPage';
 import AdminManagementOverviewPage from '../pages/AdminManagementOverviewPage';
 import KycPage from '../pages/KycPage';
+import SystemManagementPage from '../pages/SystemManagementPage';
+import EditConfigurationPage from '../pages/EditConfigurationPage';
+import ReportFormPage from '../pages/ReportFormPage';
 
 
 const AppRoutes = () => {
@@ -120,6 +123,27 @@ const AppRoutes = () => {
         }>
    
         <Route path="/kyc" element={<KycPage/>} />
+      </Route>
+       <Route
+        element={
+          <Layout />
+        }>
+   
+        <Route path="/system" element={<SystemManagementPage/>} />
+      </Route>
+         <Route
+        element={
+          <Layout />
+        }>
+   
+        <Route path="/edit-configuration" element={<EditConfigurationPage/>} />
+      </Route>
+           <Route
+        element={
+          <Layout />
+        }>
+   
+        <Route path="/create-report" element={<ReportFormPage/>} />
       </Route>
       <Route path="*" element={<h1>404 - Page Not Found</h1>} />
     </Routes>

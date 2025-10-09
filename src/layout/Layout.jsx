@@ -72,7 +72,7 @@ export default function Layout() {
  const location = useLocation();
 
   // Define routes that should have NO margin/padding
-  const noMarginRoutes = ["/content","/help","/admin","/roles","/kyc"];
+  const noMarginRoutes = ["/content","/help","/admin","/roles","/kyc","/dashboard","/system"];
 
   const isNoMargin = noMarginRoutes.includes(location.pathname);
   return (
