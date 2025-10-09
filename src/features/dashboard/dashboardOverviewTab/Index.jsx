@@ -1,9 +1,8 @@
 import React from 'react'
 import OverviewCardSection from './components/OverviewCardSection'
 import AlertAndQuickAction from './components/AlertAndQuickAction'
-import VolumeValueChart from './components/VolumeValueChart'
-import RiskScoreChart from './components/RiskScoreChart'
-import VolumeAndRiskSection from './components/VolumeAndRiskSEction'
+
+import VolumeAndRiskSection from './components/VolumeAndRiskSection'
 import RiskTransactionAndComplianceCases from './components/RecentTransactionAndComplianceCase'
 import TopPerformingAgentsAndSettlement from './components/SettlementAndTopPerformingAgents'
 
